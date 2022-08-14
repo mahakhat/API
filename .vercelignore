@@ -1,0 +1,10 @@
+# Ignore everything (folders and files) on root only
+/*
+!api_main.py
+!vercel.json
+!*.html
+!*.css
+!.env
+!favicon.ico
+!pexels.jpg
+!requirements.txt
