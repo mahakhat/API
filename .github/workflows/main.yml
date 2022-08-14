@@ -42,5 +42,7 @@ jobs:
           echo $API_KEY
 
       - name: Test env vars for python
+        env :
+            API_KEY: ${{ secrets.API_KEY }}
         run: |
           API_KEY=${{ secrets.API_KEY }} python -c 'import os;print(os.environ['API_KEY'])'
