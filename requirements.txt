@@ -1,3 +1,4 @@
 PySimpleGUI
 openai
 nltk
+flask
