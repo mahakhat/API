@@ -4,9 +4,9 @@ from main import *
 from flask_caching import Cache
 import numpy as np
 import os
-from dotenv import load_dotenv
 
-load_dotenv()
+
+
 API_KEY = os.environ['API_KEY']
 
 #This API was created to link the backend of the Deux project with the Wordpress Website
