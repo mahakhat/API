@@ -9,7 +9,7 @@ import os
 #This is the main file of the API to be run.
 #The project includes the files  config.json, main.py, front.py which are used to create the conversations and display them in a python app.
 
-API_KEY = os.environ['API_KEY']
+#API_KEY = os.environ['API_KEY']
 
 app = Flask(__name__, template_folder="API")
 cache = Cache(app, config={'CACHE_TYPE': 'simple'})
