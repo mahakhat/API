@@ -4,11 +4,15 @@ from main import *
 from flask_caching import Cache
 import numpy as np
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
+API_KEY = os.environ['API_KEY']
 
 #This API was created to link the backend of the Deux project with the Wordpress Website
 #This is the main file of the API to be run.
 #The project includes the files  config.json, main.py, front.py which are used to create the conversations and display them in a python app.
-API_KEY = os.environ.get('API_KEY')
+
 app = Flask(__name__, template_folder="API")
 cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 cache.init_app(app)
@@ -40,7 +44,7 @@ def human():
         #Configuring the parameters of the conversation.
         conf = config.load_config(CONFIG_FILE)
         openai.api_key = conf['API_KEY']
-        
+
         #Creating the conversation.
         #Requesting what the user put inside the input field.
         #The question the user asked is the input he gave.
@@ -72,7 +76,7 @@ def robot():
         #Configuring the parameters of the conversation.
         conf = config.load_config(CONFIG_FILE)
         openai.api_key = conf['API_KEY']
-
+        API_KEY = os.getenv("API_KEY")
         #Creating the conversation.
         #Requesting which religions the user chose.
         #Requesting what topic the user put into the input field.
