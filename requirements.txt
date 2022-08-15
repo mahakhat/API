@@ -1,4 +1,5 @@
 PySimpleGUI
 openai
-
+nltk
 flask
+tk==0.1.0
