@@ -10,8 +10,8 @@
 !pexels.jpg
 !requirements.txt
 !ressources
-!utils/config.py
-!view/front.py
+!utils
+!view
 
 
 
