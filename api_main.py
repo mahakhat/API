@@ -200,9 +200,9 @@ def style_robot():
 def picture():
     return send_file('pexels.jpg', mimetype='image/jpg')
 
-@app.route('/favicon.ico', methods = ['GET'])
-def favicon():
-    return send_file('favicon.ico', mimetype='image/x-icon')
+#@app.route('/favicon.ico', methods = ['GET'])
+#def favicon():
+#    return send_file('favicon.ico', mimetype='image/x-icon')
 
 #Main
 if __name__ == '__main__':
