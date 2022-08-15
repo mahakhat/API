@@ -36,9 +36,9 @@ def success():
         print(choice)
 
         if choice == "human":
-            return redirect("https://deus-x-machina.vercel.app/human.html")
+            return redirect("/human.html")
         elif choice == "robot":
-            return redirect("https://deus-x-machina.vercel.app/robot.html")
+            return redirect("/robot.html")
 
 
 @app.route('/human', methods = ['POST'])
