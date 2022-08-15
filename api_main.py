@@ -197,13 +197,13 @@ def style_robot():
 #GET request for the pexels.jpg file.
 #Will give a 304 rederection code afger a first run of the api since the image will already be saved in the cache.
 #(304 Not Modified client redirection response code indicates that there is no need to retransmit the requested resources.)
-@app.route('/pexels.jpg', methods = ['GET'])
-def picture():
-    return send_file('pexels.jpg', mimetype='image/jpg')
+#@app.route('/pexels.jpg', methods = ['GET'])
+#def picture():
+#    return send_file('pexels.jpg', mimetype='image/jpg')
 
-@app.route('/favicon.ico', methods = ['GET'])
-def favicon():
-    return send_file('favicon.ico', mimetype='image/x-icon')
+#@app.route('/favicon.ico', methods = ['GET'])
+#def favicon():
+#    return send_file('favicon.ico', mimetype='image/x-icon')
 
 #Main
 if __name__ == '__main__':
