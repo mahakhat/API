@@ -89,22 +89,6 @@ def robot():
         religion1_intro = ""
         religion2_intro = ""
 
-        #match religion1:
-        #    case "Pastafarianism":
-        #        religion1_intro = "a religion centered around the Flying Spaghetti Monster, a creator deity who resembles spaghetti and meatballs."
-        #    case "Islam":
-        #        religion1_intro = "the religion of the Muslims, a monotheistic faith regarded as revealed through Muhammad as the Prophet of Allah. "
-        #    case "Zeus":
-        #        religion1_intro = "in Greek mythology, is the greatest of the gods, the god of the sky and the weather, who ruled over human beings and the other gods"
-        #    case "Odin":
-        #        religion1_intro = "the main god in norse mythology, he is the god of war and death "
-        #    case "Christianity":
-        #        religion1_intro = "a religion based on belief in God and the life and teachings of Jesus Christ, and on the Bible"
-        #    case "Judaism":
-        #        religion1_intro = "the religion of the Jewish people, based on belief in one God and on the laws contained in the Torah and Talmud"
-        #    case "Buddhism":
-        #        religion1_intro = "a religion that originally comes from South Asia, and teaches that personal spiritual improvement will lead to escape from human suffering"
-        
         if religion1 == "Pastafarianism":
             religion1_intro = "a religion centered around the Flying Spaghetti Monster, a creator deity who resembles spaghetti and meatballs."
         elif religion1 == "Islam":
@@ -135,22 +119,7 @@ def robot():
         elif religion2 == "Buddhism":
             religion2_intro = "a religion that originally comes from South Asia, and teaches that personal spiritual improvement will lead to escape from human suffering"
         
-        #match religion2:
-        #    case "Pastafarianism":
-        #        religion2_intro = "a religion centered around the Flying Spaghetti Monster, a creator deity who resembles spaghetti and meatballs."
-        #    case "Islam":
-        #        religion2_intro = "the religion of the Muslims, a monotheistic faith regarded as revealed through Muhammad as the Prophet of Allah. "
-        #    case "Zeus":
-        #        religion2_intro = "in Greek mythology, is the greatest of the gods, the god of the sky and the weather, who ruled over human beings and the other gods"
-        #    case "Odin":
-        #        religion2_intro = "the main god in norse mythology, he is the god of war and death "
-        #    case "Christianity":
-        #        religion2_intro = "a religion based on belief in God and the life and teachings of Jesus Christ, and on the Bible"
-        #    case "Judaism":
-        #        religion2_intro = "the religion of the Jewish people, based on belief in one God and on the laws contained in the Torah and Talmud"
-        #    case "Buddhism":
-        #        religion2_intro = "a religion that originally comes from South Asia, and teaches that personal spiritual improvement will lead to escape from human suffering"
-
+        
         intro = "The {} religion is {}. \n" \
                 "The {} religion is {}.\n" \
                 "The following is a conversation between {} and {} about {}."\
