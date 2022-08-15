@@ -22,7 +22,7 @@ cache.init_app(app)
 
 
 
-@app.route('https://deus-x-machina.vercel.app/main', methods=['POST'])
+@app.route("https://deus-x-machina.vercel.app/main", methods=['POST'])
 def success():
         #Requesting the user input, the values of the checkboxes and the different religions.
         choice = request.form.get('choice')
@@ -41,7 +41,7 @@ def success():
             return redirect("/robot.html")
 
 
-@app.route('https://deus-x-machina.vercel.app/human', methods = ['POST'])
+@app.route('/human', methods = ['POST'])
 def human():
     if request.method == 'POST':
         conf = config.load_config(CONFIG_FILE)
@@ -70,7 +70,7 @@ def human():
     cache.clear()         
     return "End of conversation"
 
-@app.route('https://deus-x-machina.vercel.app/robot', methods = ['POST'])
+@app.route('/robot', methods = ['POST'])
 def robot():
     if request.method == 'POST':
         conf = config.load_config(CONFIG_FILE)
@@ -176,32 +176,32 @@ def robot():
     return "End of conversation"       
     
 
-@app.route('https://deus-x-machina.vercel.app/human.html', methods = ['GET'])
+@app.route('/human.html', methods = ['GET'])
 def show_human():
     return open("human.html").read()
 
-@app.route('https://deus-x-machina.vercel.app/robot.html', methods = ['GET'])
+@app.route('/robot.html', methods = ['GET'])
 def show_robot():
     return open("robot.html").read()
 
 #GET request to open and display the style.css file such that the styles are still present after a request.
-@app.route('https://deus-x-machina.vercel.app/human.css', methods = ['GET'])  
+@app.route('/human.css', methods = ['GET'])  
 def style_human():
     return open("human.css").read()
 
 #GET request to open and display the style.css file such that the styles are still present after a request.
-@app.route('https://deus-x-machina.vercel.app/robot.css', methods = ['GET'])  
+@app.route('/robot.css', methods = ['GET'])  
 def style_robot():
     return open("robot.css").read()
 
 #GET request for the pexels.jpg file.
 #Will give a 304 rederection code afger a first run of the api since the image will already be saved in the cache.
 #(304 Not Modified client redirection response code indicates that there is no need to retransmit the requested resources.)
-@app.route('https://deus-x-machina.vercel.app/pexels.jpg', methods = ['GET'])
+@app.route('/pexels.jpg', methods = ['GET'])
 def picture():
     return send_file('pexels.jpg', mimetype='image/jpg')
 
-@app.route('https://deus-x-machina.vercel.app/favicon.ico', methods = ['GET'])
+@app.route('/favicon.ico', methods = ['GET'])
 def favicon():
     return send_file('favicon.ico', mimetype='image/x-icon')
 
