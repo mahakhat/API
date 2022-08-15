@@ -22,7 +22,7 @@ cache.init_app(app)
 
 
 
-@app.route("https://deus-x-machina.vercel.app/main", methods=['POST'])
+@app.route('/main', methods=['POST'])
 def success():
         #Requesting the user input, the values of the checkboxes and the different religions.
         choice = request.form.get('choice')
@@ -41,7 +41,7 @@ def success():
             return redirect("/robot.html")
 
 
-@app.route("https://deus-x-machina.vercel.app/human", methods = ['POST'])
+@app.route('/human', methods = ['POST'])
 def human():
     if request.method == 'POST':
         conf = config.load_config(CONFIG_FILE)
@@ -70,7 +70,7 @@ def human():
     cache.clear()         
     return "End of conversation"
 
-@app.route("https://deus-x-machina.vercel.app/robot", methods = ['POST'])
+@app.route('/robot', methods = ['POST'])
 def robot():
     if request.method == 'POST':
         conf = config.load_config(CONFIG_FILE)
@@ -176,11 +176,11 @@ def robot():
     return "End of conversation"       
     
 
-@app.route("https://deus-x-machina.vercel.app/human", methods = ['GET'])
+@app.route('/human.html', methods = ['GET'])
 def show_human():
     return open("human.html").read()
 
-@app.route("https://deus-x-machina.vercel.app/robot", methods = ['GET'])
+@app.route('/robot.html', methods = ['GET'])
 def show_robot():
     return open("robot.html").read()
 
