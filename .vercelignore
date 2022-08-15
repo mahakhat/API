@@ -1,6 +1,7 @@
 # Ignore everything (folders and files) on root only
 /*
 !api_main.py
+!main.py
 !vercel.json
 !*.html
 !*.css
@@ -8,3 +9,9 @@
 !favicon.ico
 !pexels.jpg
 !requirements.txt
+!ressources
+!utils/config.py
+!view/front.py
+
+
+
