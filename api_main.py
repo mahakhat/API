@@ -41,7 +41,7 @@ def success():
             return redirect("/robot.html")
 
 
-@app.route('/human', methods = ['POST'])
+@app.route("https://deus-x-machina.vercel.app/human", methods = ['POST'])
 def human():
     if request.method == 'POST':
         conf = config.load_config(CONFIG_FILE)
@@ -70,7 +70,7 @@ def human():
     cache.clear()         
     return "End of conversation"
 
-@app.route('/robot', methods = ['POST'])
+@app.route("https://deus-x-machina.vercel.app/robot", methods = ['POST'])
 def robot():
     if request.method == 'POST':
         conf = config.load_config(CONFIG_FILE)
@@ -176,11 +176,11 @@ def robot():
     return "End of conversation"       
     
 
-@app.route('/human.html', methods = ['GET'])
+@app.route("https://deus-x-machina.vercel.app/human", methods = ['GET'])
 def show_human():
     return open("human.html").read()
 
-@app.route('/robot.html', methods = ['GET'])
+@app.route("https://deus-x-machina.vercel.app/robot", methods = ['GET'])
 def show_robot():
     return open("robot.html").read()
 
