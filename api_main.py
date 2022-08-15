@@ -5,6 +5,7 @@ from flask_caching import Cache
 import numpy as np
 import os
 from dotenv import load_dotenv
+import tkinter
 
 load_dotenv()
 API_KEY = os.getenv("OPENAI_API_KEY")
@@ -200,9 +201,9 @@ def style_robot():
 def picture():
     return send_file('pexels.jpg', mimetype='image/jpg')
 
-#@app.route('/favicon.ico', methods = ['GET'])
-#def favicon():
-#    return send_file('favicon.ico', mimetype='image/x-icon')
+@app.route('/favicon.ico', methods = ['GET'])
+def favicon():
+    return send_file('favicon.ico', mimetype='image/x-icon')
 
 #Main
 if __name__ == '__main__':
