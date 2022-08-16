@@ -1,0 +1,5 @@
+mysql_host: 'sql310.epizy.com'
+mysql_user: 'epiz_32250575'
+# Enter your password in field below
+mysql_password: 'BOSOha0RmEN'
+mysql_db: 'epiz_32250575_w485'

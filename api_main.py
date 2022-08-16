@@ -6,20 +6,31 @@ import numpy as np
 import os
 from dotenv import load_dotenv
 from tkinter import *
+#import for the databse
+from flask_mysqldb import MySQL
+import yaml
+
+#This API was created to link the backend of the Deux project with the Wordpress Website
+#This is the main file of the API to be run.
+#The project includes the files  config.json, main.py, front.py which are used to create the conversations and display them in a python app.
+app = Flask(__name__, template_folder="API")
+cache = Cache(app, config={'CACHE_TYPE': 'simple'})
+cache.init_app(app)
+
+# Configure db
+#db = yaml.loader(open('db.yaml'))
+#app.config['MYSQL_HOST'] = 'sql310.epizy.com'
+#app.config['MYSQL_USER'] = 'epiz_32250575'
+#app.config['MYSQL_PASSWORD'] = 'BOSOha0RmEN'
+#app.config['MYSQL_DB'] = 'epiz_32250575_w485'
+
+#mysql = MySQL(app)
+
 
 load_dotenv()
 API_KEY = os.getenv("OPENAI_API_KEY")
 openai.api_key= API_KEY
 #API_KEY = os.environ['API_KEY']
-
-#This API was created to link the backend of the Deux project with the Wordpress Website
-#This is the main file of the API to be run.
-#The project includes the files  config.json, main.py, front.py which are used to create the conversations and display them in a python app.
-
-app = Flask(__name__, template_folder="API")
-cache = Cache(app, config={'CACHE_TYPE': 'simple'})
-cache.init_app(app)
-
 
 
 @app.route('/main', methods=['POST'])
@@ -55,7 +66,14 @@ def human():
         #The response needs to be split into two, the beginning is "Human: {user's question}" and the second "Religion: {Bot's answer}".
         #index opens the human.html file and displays both responses.
         #index is returned.
+
         user_text = request.form['user_text']
+        #db
+        #cur = mysql.connection.cursor()
+        #cur.execute("INSERT INTO Topic(question) VALUES(%s)",(user_text))
+        #mysql.connection.commit()
+        #cur.close()
+        #db
         question = user_text
         user = "Human: "
         religion1 = cache.get('religion1')
